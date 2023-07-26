@@ -1,0 +1,147 @@
+.navmob-animate {
+    transform: translateX(25vw);
+    transition: 1s;
+    opacity: 1;
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.close button {
+    cursor: pointer;
+    border: none;
+    margin: 1vh 1vw;
+}
+
+.close button img {
+    height: 5vh;
+}
+button:active{
+    transform: scale(.8);
+    transition: 200ms;
+}
+
+
+.displayNone {
+    display: none;
+}
+
+@keyframes playButton {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.8);
+    }
+}
+
+;
+
+[data-anime] {
+    opacity: 0;
+}
+
+[data-anime="grow"] {
+    transform: scale(.4);
+    transition: .6s;
+    opacity: 0;
+}
+
+[data-anime].animate {
+    transform: scale(1);
+    transition: .6s;
+    opacity: 1;
+}
+
+.bg-dark {
+    opacity: .3;
+    transition: 1s;
+}
+
+.rotate {
+    animation: deliveryItem 2s .5s ease alternate;
+}
+
+@media (max-width:1023px) {
+    @keyframes deliveryItem {
+        50% {
+            transform: scale(.8) rotate(45deg);
+        }
+
+        75% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg) translate(300%);
+        }
+    }
+
+
+    @keyframes rotateItems {
+        50% {
+            transform: scale(.8) rotate(75deg);
+        }
+
+        75% {
+            transform: scale(.9) rotate(-75deg);
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
+
+    .deliveryItem {
+        animation: deliveryItem 1.5s ease;
+    }
+
+    .rotateItems {
+        animation: rotateItems 1.5s ease;
+    }
+}
+
+@media (min-width:1023px) {
+    @keyframes deliveryItem2 {
+        50% {
+            transform: scale(.8) rotate(45deg);
+        }
+
+        75% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg) translate(400%);
+        }
+    }
+
+
+    @keyframes rotateItems2 {
+        50% {
+            transform: scale(.8) rotate(75deg);
+        }
+
+        75% {
+            transform: scale(.9) rotate(-75deg);
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
+
+    .deliveryItem2 {
+        animation: deliveryItem2 1.5s ease;
+    }
+
+    .rotateItems2 {
+        animation: rotateItems2 1.5s ease;
+    }
+}
